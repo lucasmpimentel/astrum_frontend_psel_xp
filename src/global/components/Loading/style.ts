@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
 align-items: center;
-background-color: #010101;
+background-color: ${({ theme }) => theme.colors.background};
 display: flex;
 flex-direction: column;
 justify-content: space-between;
