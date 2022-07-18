@@ -1,7 +1,8 @@
 import React from 'react';
+import Loading from 'components/Loading';
 
 export default function Login() {
   return (
-    <h1>Login</h1>
+    <Loading />
   );
 }

@@ -1,6 +1,6 @@
 export default {
   colors: {
-    background: '#000',
+    background: '#010101',
     primary: {
       yellow: '#f5a923',
       pink: '#fc2f57',
