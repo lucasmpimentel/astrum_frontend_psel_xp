@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Context from './context';
 
 function Provider({ children }: {children: React.ReactNode}) {
-  const [test, setTest] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const context = useMemo(() => ({
-    test,
-    setTest,
-  }), [test]);
+    isLoading,
+    setIsLoading,
+  }), [isLoading]);
 
   return (
     <Context.Provider value={context}>
