@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lucas",
+      "lastname": "Pimentel",
+      "email": "lucas.mirandapimentel@gmail.com",
+      "password":"091016",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Larissa",
+      "lastname": "Sant'Anna",
+      "email": "lari.santanna10@gmail.com",
+      "password": "091016la",
+      "isActive": false
+    }
+  ],
+  "wallets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "value": 12000.00,
+      "shares": {
+        "PETR4": 200,
+        "VALE3": 120,
+        "EMBR3": 500
+      }
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "value": 55000.00,
+      "shares": {
+        "PETR4": 400,
+        "EMBR3": 100
+      }
+    }
+  ],
+  "trades": [
+    {
+      "userId": 1,
+      "walletId": 1,
+      "buy": null,
+      "sell": {
+        "PETR4": 20
+      },
+      "datetime": "2022-07-18 22:01:32"
+    },
+    {
+      "userId": 1,
+      "walletId": 1,
+      "buy": null,
+      "sell": {
+        "PETR4": 50
+      },
+      "datetime": "2022-07-18 20:01:32"
+    },
+    {
+      "userId": 2,
+      "walletId": 2,
+      "buy": {
+        "EMBR3": 100
+      },
+      "sell": null,
+      "datetime": "2022-07-18 20:01:32"
+    }
+  ]
+}
