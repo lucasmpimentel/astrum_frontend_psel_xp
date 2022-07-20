@@ -6,15 +6,34 @@ const host = axios.create({
   timeout: 10000,
 });
 
+interface Iaxiosuser {
+  id: number;
+  name: string;
+  lastname: string;
+  email: string;
+  password: string;
+  isActive: boolean;
+}
+
 async function makeLogin(email: string, password: string) {
-  const req = { email, password };
-  const result: IUserLogged = ({
-    email: req.email,
-    username: 'Pessoa',
-    token: 'secret',
-  });
-  console.log(host);
-  return result;
+  // ----------- temporary database connection ------------------
+  const getUser: any = await host.get('/users')
+    .then((res) => res.data)
+    .then((data) => data.filter((user: any) => user.email === email))
+    .catch((err) => new Error(err.message));
+  const user: Iaxiosuser = getUser[0];
+  if (user.password === password) {
+    const result: IUserLogged = ({
+      id: user.id,
+      name: user.name,
+      lastname: user.lastname,
+      email: user.email,
+      isActive: true,
+      token: 'secret',
+    });
+    return result;
+  }
+  throw new Error('Erro na autenticação');
 }
 
 export default makeLogin;

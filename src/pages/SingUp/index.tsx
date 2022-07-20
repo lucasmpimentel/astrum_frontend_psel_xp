@@ -46,7 +46,7 @@ export default function SingUp() {
       } else {
         global.alert(resp.message);
       } */
-      navigate('/login');
+      navigate('/');
     } else {
       global.alert('Dados Incorretos');
     }
