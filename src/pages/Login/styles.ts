@@ -20,29 +20,19 @@ export const Main = styled.main`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.text};
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 26px;
-  margin-top: 100px;
 `;
 
-export const Form = styled.form`
-  align-self: center;
-  justify-self: baseline;
-  max-width: 90vw;
-`;
-
-export const Pass = styled.p`
-  color: ${({ theme }) => theme.colors.text};
-  font-family: Roboto, monospace;
-  font-size: 12px;
-  margin-top: 2px;
-  text-transform: lowercase;
-  transition: ease-out 0.30ms;
-`;
-
-export const CBLabel = styled.label`
-  color: ${({ theme }) => theme.colors.text};
+export const LoginForm = styled.form`
   display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell;
+  flex-direction: column;
   justify-content: space-between;
+  min-height: 35vh;
+  width: 100%;
+`;
+
+export const SingUpDiv = styled.div`
+  align-items: center;
+  display: flex;
 `;
