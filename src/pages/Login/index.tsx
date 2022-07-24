@@ -8,7 +8,7 @@ import Loading from '../../global/components/Loading';
 import Input from '../../global/components/shared/Input';
 import OutlineBtn from '../../global/components/shared/OutlineBtn';
 import Modal from '../../global/components/Modal';
-import { IEventLogin, IUserLogged, IUserLogin } from './Interfaces/login.interfaces';
+import { IEventLogin, IUserLogged, IUserLogin } from '../../global/interfaces/user.interfaces';
 import * as C from './styles';
 
 export default function Login() {

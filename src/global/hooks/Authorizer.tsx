@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import context from '../../context/context';
 import auth from '../services/auth.service';
-import { IUserLogged } from '../../pages/Login/Interfaces/login.interfaces';
+import { IUserLogged } from '../interfaces/user.interfaces';
 
 function Authorizer() {
   const {

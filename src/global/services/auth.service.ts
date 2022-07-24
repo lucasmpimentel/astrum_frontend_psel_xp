@@ -1,4 +1,4 @@
-import { IUserLogged } from '../../pages/Login/Interfaces/login.interfaces';
+import { IUserLogged } from '../interfaces/user.interfaces';
 import storage from './storage.services';
 
 function checkAuth() {

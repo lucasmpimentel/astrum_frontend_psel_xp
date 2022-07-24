@@ -6,13 +6,22 @@ import Context from '../../../context/context';
 import storage from '../../../global/services/storage.services';
 import Loading from '../../../global/components/Loading';
 import BackBtn from '../../../global/components/shared/BackBtn';
-import { IUserLogged } from '../../Login/Interfaces/login.interfaces';
+import { IUserLogged } from '../../../global/interfaces/user.interfaces';
 import * as C from './styles';
 import Balance from './components/Balance';
 
+const INITIAL_STATE: IUserLogged = {
+  id: 0,
+  name: '',
+  lastname: '',
+  email: '',
+  isActive: false,
+  token: '',
+};
+
 function Home() {
   const navigate = useNavigate();
-  const [user, setUser] = useState<IUserLogged>();
+  const [user, setUser] = useState<IUserLogged>(INITIAL_STATE);
   const {
     isLoading,
     setIsLoading,
@@ -35,7 +44,7 @@ function Home() {
           <h2>{`Olá ${user?.name}`}</h2>
         </C.Header>
         <h2>Sua Carteira</h2>
-        <Balance />
+        <Balance user={user} />
       </C.Main>
     )
   );
