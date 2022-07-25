@@ -11,8 +11,8 @@ export interface IUserLogin {
 export interface IUserLogged {
   id: number;
   name: string;
-  lastname: string;
+  lastname?: string;
   email: string;
   isActive: boolean;
-  token: string;
+  token?: string;
 }

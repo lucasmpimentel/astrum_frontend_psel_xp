@@ -17,6 +17,7 @@ export const Main = styled.main`
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   justify-content: space-between;
+  margin-top: 30px;
   min-height: 180px;
   padding: 15px;
 `;

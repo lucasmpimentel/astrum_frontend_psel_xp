@@ -36,3 +36,8 @@ export const SingUpDiv = styled.div`
   align-items: center;
   display: flex;
 `;
+
+export const Logo = styled.img`
+  margin: auto 0;
+  width: 100%;
+`;

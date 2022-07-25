@@ -9,6 +9,7 @@ import BackBtn from '../../../global/components/shared/BackBtn';
 import { IUserLogged } from '../../../global/interfaces/user.interfaces';
 import * as C from './styles';
 import Balance from './components/Balance';
+import ShareList from './components/ShareList';
 
 const INITIAL_STATE: IUserLogged = {
   id: 0,
@@ -43,8 +44,9 @@ function Home() {
           </BackBtn>
           <h2>{`Olá ${user?.name}`}</h2>
         </C.Header>
-        <h2>Sua Carteira</h2>
+        <h4>Sua Carteira</h4>
         <Balance user={user} />
+        <ShareList />
       </C.Main>
     )
   );
