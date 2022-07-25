@@ -9,7 +9,10 @@ export interface IUserLogin {
 }
 
 export interface IUserLogged {
+  id: number;
+  name: string;
+  lastname?: string;
   email: string;
-  username: string;
-  token: string;
+  isActive: boolean;
+  token?: string;
 }

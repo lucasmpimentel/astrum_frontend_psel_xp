@@ -22,7 +22,7 @@ function setSessionStorage(key: string, value: any) {
 
 function getSessionStorage(key: string) {
   try {
-    let data = localStorage.getItem(key);
+    let data = sessionStorage.getItem(key);
     if (data) {
       data = JSON.parse(data);
     }

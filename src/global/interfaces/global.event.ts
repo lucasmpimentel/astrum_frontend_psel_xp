@@ -1,4 +1,4 @@
-export interface GlobalEvent {
+export interface IGlobalEvent {
   bubbles: boolean;
   cancelable: boolean;
   currentTarget: EventTarget;
@@ -11,4 +11,9 @@ export interface GlobalEvent {
   target: EventTarget;
   timeStamp: Date;
   type: string;
+}
+
+export interface IEvent {
+  name: string;
+  value: string;
 }
